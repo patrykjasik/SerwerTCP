@@ -82,6 +82,7 @@
             this.przycisk_stop.TabIndex = 4;
             this.przycisk_stop.Text = "Stop";
             this.przycisk_stop.UseVisualStyleBackColor = true;
+            this.przycisk_stop.Click += new System.EventHandler(this.przycisk_stop_Click);
             // 
             // Form1
             // 
@@ -95,6 +96,7 @@
             this.Controls.Add(this.adres);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.port_p)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
