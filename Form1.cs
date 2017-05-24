@@ -43,7 +43,12 @@ namespace SerwerTCP
                 serwer.Start();
 
                 klient = serwer.AcceptTcpClient();
-                listBox1.Items.Add("Nawiązano połączenie!");
+
+                //za klient=serwer…
+                IPEndPoint IP = (IPEndPoint)klient.Client.RemoteEndPoint;
+                listBox1.Items.Add("[ " + IP.ToString() + "] :Nawiązano połączenie");
+
+//                listBox1.Items.Add("Nawiązano połączenie!");
 
                 przycisk_start.Enabled = false;
                 przycisk_stop.Enabled = true;
